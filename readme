@@ -1,0 +1,67 @@
+# ksense-webhook
+
+Ksense Code Challenge (Node.js, TypeScript, Jest, Firebase)
+
+## Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/logicVirtuoso/ksense-webhook.git
+   cd ksense-webhook
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+## Configuration
+
+1. Create a `.env` file in the root directory of the project and add the following environment variables:
+
+   ```properties
+   PORT=5000
+   NODE_ENV=production
+   FIREBASE_PROJECT_ID=your_firebase_project_id
+   FIREBASE_PRIVATE_KEY_ID=your_firebase_private_key_id
+   FIREBASE_PRIVATE_KEY=PRIVATE KEY
+   FIREBASE_CLIENT_EMAIL=your_firebase_client_email
+   FIREBASE_CLIENT_ID=your_firebase_client_id
+   FIREBASE_AUTH_URI=https://accounts.google.com/o/oauth2/auth
+   FIREBASE_TOKEN_URI=https://oauth2.googleapis.com/token
+   FIREBASE_AUTH_PROVIDER_X509_CERT_URL=https://www.googleapis.com/oauth2/v1/certs
+   FIREBASE_CLIENT_X509_CERT_URL=your_firebase_client_email
+   FIREBASE_DATABASE_DOMAIN=googleapis.com
+   ```
+
+2. You can use the `.env.example` file as a reference.
+
+## Usage
+
+1. Start the server:
+
+   ```sh
+   npm start
+   ```
+
+2. The server will be running on the port specified in the `.env` file (default is 5000).
+
+3. You can send POST requests to the `/webhook` endpoint with the payload you want to store in Firestore.
+
+## Testing
+
+Run the tests using Jest:
+
+```sh
+npm test
+```
+
+## Linting
+
+Check the code for linting errors using ESLint:
+
+```sh
+npm run lint
+```
